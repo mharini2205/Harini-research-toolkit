@@ -1,0 +1,49 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Research Paper Brief input",
+  "description": "Shape of the JSON passed to scripts/build_brief.py. All fields optional; missing content renders as a 'Not reported' note so the seven-section shape is preserved.",
+  "type": "object",
+  "properties": {
+    "title": {"type": "string", "description": "Paper title."},
+    "citation": {"type": "string", "description": "Short citation, e.g. 'Doe et al., Nature Neuroscience, 2024'."},
+    "objective": {"type": "string", "description": "Specific aim in 1-2 sentences."},
+    "hypothesis": {"type": "string", "description": "Testable claim. Append '(implicit)' if not stated by the authors."},
+    "workflow": {
+      "type": "array",
+      "description": "4-8 ordered method steps.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {"type": "string", "description": "2-4 word stage name."},
+          "detail": {"type": "string", "description": "One line: the how / key parameter / sample size."}
+        },
+        "required": ["title"]
+      }
+    },
+    "procedure": {
+      "type": "array",
+      "description": "Plain-words walkthrough of the method — the narrative companion to 'workflow'. Each item is one or two jargon-free sentences a non-specialist could follow, mirroring the workflow steps. Renders as a numbered list under the workflow flow.",
+      "items": {"type": "string"}
+    },
+    "outcomes": {"type": "string", "description": "Headline result first, then the supporting numbers."},
+    "future_directions": {"type": "string", "description": "Open questions, limitations, proposed follow-ups."},
+    "authors": {
+      "type": "array",
+      "description": "The handful who did the core work.",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {"type": "string"},
+          "role": {"type": "string", "description": "e.g. 'first author', 'corresponding author', 'senior author'."}
+        },
+        "required": ["name"]
+      }
+    },
+    "institutes": {
+      "type": "array",
+      "description": "Labs, universities, hospitals, or companies behind the work.",
+      "items": {"type": "string"}
+    },
+    "note": {"type": "string", "description": "Optional. One or two sentences on what this paper means for your own work. Your interpretation, not content from the paper. Omit for papers with no relevance."}
+  }
+}

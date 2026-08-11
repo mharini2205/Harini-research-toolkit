@@ -1,0 +1,25 @@
+{
+  "title": "Researcher Dossier — Prof. Jane Example",
+  "subtitle": "One-line identity. Institution.",
+  "footer": "Confidential — internal IP/competitive intelligence",
+  "output": "/sessions/<session>/mnt/outputs/profiles/Example_Institution.docx",
+  "blocks": [
+    { "type": "bottomline", "text": "Citation source, not a competitor. No FTO concern." },
+    { "type": "h1", "text": "Who she is" },
+    { "type": "p", "text": "Role, institution, training, research focus.",
+      "links": [{ "text": "Lab page", "url": "https://example.edu/lab" }] },
+    { "type": "h1", "text": "Publications relevant to the work" },
+    { "type": "h2", "text": "Paper title (year)" },
+    { "type": "p", "label": "Why it matters: ", "text": "One sentence.",
+      "links": [{ "text": "DOI", "url": "https://doi.org/xxx" }, { "text": "PubMed", "url": "https://pubmed.ncbi.nlm.nih.gov/xxx/" }] },
+    { "type": "h1", "text": "Patents" },
+    { "type": "p", "text": "None found / list with Google Patents links and grant dates." },
+    { "type": "h1", "text": "Classification & prior-art mapping" },
+    { "type": "bullet", "label": "Classification: ", "text": "Citation source / collaborator / competitor." },
+    { "type": "bullet", "label": "Prior-art lineage: ", "text": "Which lineage or 'no overlap'." },
+    { "type": "bullet", "label": "Freedom-to-operate: ", "text": "Explicit statement." },
+    { "type": "h1", "text": "Verification note" },
+    { "type": "p", "text": "Dated. Cross-checks (Justia/Espacenet), excluded same-surname matches, overridden web claims." },
+    { "type": "sources", "items": [{ "text": "Source A", "url": "https://..." }] }
+  ]
+}

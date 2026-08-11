@@ -1,0 +1,16 @@
+{
+  "name": "harini-research-toolkit",
+  "displayName": "Harini Research Toolkit",
+  "version": "0.2.0",
+  "description": "Research toolkit: authorship/association mapping, computational modeling for magnetic / coil-based neural stimulation, prior-art landscaping, researcher dossiers, paper briefing, and SimNIBS TMS setup.",
+  "author": {
+    "name": "Harini"
+  },
+  "keywords": [
+    "research",
+    "patents",
+    "prior-art",
+    "biophysics",
+    "simnibs"
+  ]
+}
