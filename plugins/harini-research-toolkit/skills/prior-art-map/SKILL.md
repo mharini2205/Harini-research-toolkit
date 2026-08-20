@@ -1,6 +1,6 @@
 ---
 name: prior-art-map
-description: Run and maintain a prior-art / patent landscape map. Use whenever you want to search patents or literature around a coil, stimulation, or thermal concept and organize the hits — e.g. "prior art on microchannel coil arrays", "patent search for phased-array coils", "find prior art on magnetic auditory stimulation", "add these thermal references to the mapper", "map the IP landscape for X". Trigger for freedom-to-operate scans, competitive IP landscaping, and building or extending the Excel prior-art mapper with reference/thermal row blocks. Produces a deduped, source-linked .xlsx with a "why it matters" note per asset.
+description: Run and maintain a prior-art / patent landscape map. Use whenever you want to search patents or literature around a coil, stimulation, or thermal concept and organize the hits — e.g. "prior art on microchannel coil arrays", "patent search for phased-array coils", "find prior art on implantable magnetic stimulation", "add these thermal references to the mapper", "map the IP landscape for X". Trigger for freedom-to-operate scans, competitive IP landscaping, and building or extending the Excel prior-art mapper with reference/thermal row blocks. Produces a deduped, source-linked .xlsx with a "why it matters" note per asset.
 ---
 
 # Prior-Art Map

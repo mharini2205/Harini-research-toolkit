@@ -17,10 +17,18 @@ researchers and competitors, briefing papers, and setting up SimNIBS TMS simulat
 
 authorship-association, computational-science, prior-art-map, and researcher-dossier each ship
 a `references/context.md` with the prior-art lineages and house style/sourcing conventions —
-each skill reads its own copy first.
+each skill reads its own copy first. The four copies are identical by design (skills stay
+self-contained); if you edit one, copy it over the other three.
+
+**To adapt this toolkit to a different research field**, rewrite the Scope, Core vocabulary,
+and Prior-art lineages sections of `context.md` — the classification framework, output
+conventions, and verification rules are domain-agnostic and carry over unchanged.
 
 ## Install
 
 Drop this plugin into Cowork or Claude Code; skills load automatically and trigger based on the
 phrasing described in each SKILL.md (e.g. "profile Dr. X", "prior art on microchannel coil
 arrays", "what dI/dt for 3.5 T").
+
+Bundled builders: `research-paper-brief` uses plain Python 3, `researcher-dossier` needs Node
+plus a one-time `npm install docx`, and `simnibs-tms-setup`'s `kernel.py` needs `numpy`.

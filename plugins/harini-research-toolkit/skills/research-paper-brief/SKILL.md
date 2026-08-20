@@ -192,11 +192,11 @@ The JSON schema (see `references/brief_schema.json` for the full version):
   "objective": "…",
   "hypothesis": "…",
   "workflow": [
-    {"title": "Fabricate coils", "detail": "micro-coil arrays for intracochlear placement"},
+    {"title": "Fabricate coils", "detail": "micro-coil arrays for implantable placement"},
     {"title": "Bench characterization", "detail": "field mapped in saline"}
   ],
   "procedure": [
-    "First they built tiny coil arrays small enough to sit inside the cochlea.",
+    "First they built tiny coil arrays small enough to implant next to the target nerve.",
     "Then they dunked each coil in salt water — a stand-in for body tissue — and measured the magnetic field around it, to check their design behaved the way the model predicted."
   ],
   "outcomes": "…",

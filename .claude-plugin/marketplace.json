@@ -1,6 +1,6 @@
 {
   "name": "harini-research-toolkit",
-  "description": "Harini's research plugins.",
+  "description": "Research skills for deep-tech R&D: paper briefing, authorship intelligence, researcher dossiers, prior-art landscaping, coil/neural/thermal modeling, and SimNIBS TMS setup.",
   "owner": {
     "name": "Harini",
     "email": "mharini2205@gmail.com",
@@ -12,7 +12,8 @@
       "displayName": "Harini Research Toolkit",
       "source": "./plugins/harini-research-toolkit",
       "description": "Authorship/association mapping, computational modeling for magnetic / coil-based neural stimulation, prior-art landscaping, researcher dossiers, paper briefing, and SimNIBS TMS setup.",
-      "version": "0.2.0",
+      "version": "0.3.0",
+      "license": "MIT",
       "author": {
         "name": "Harini"
       },

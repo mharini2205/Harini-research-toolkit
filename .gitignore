@@ -1,0 +1,19 @@
+# Dependency installs made next to the bundled scripts
+node_modules/
+package-lock.json
+package.json
+
+# Python
+__pycache__/
+*.pyc
+
+# Generated outputs (dossiers, briefs, mappers built while testing)
+outputs/
+profiles/
+*.docx
+*.xlsx
+!plugins/**/references/*.xlsx
+
+# OS noise
+.DS_Store
+Thumbs.db

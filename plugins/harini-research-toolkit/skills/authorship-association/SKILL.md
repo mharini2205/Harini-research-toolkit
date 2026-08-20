@@ -1,6 +1,6 @@
 ---
 name: authorship-association
-description: Identify, verify, and map the people behind a paper or patent, and the associations between them, their institutions, and prior art. Use whenever you want to know who actually did the work or how people/labs connect — e.g. "who did the surgery in this cochlea study", "extract the authors and figure out who ran the experiments", "is this the same author X", "who is connected to this micro-coil work", "map the collaboration network around this patent", "which authors overlap with the prior art". Trigger for author-contribution analysis, identity verification across sources, and building the association/network map that links authors, inventors, institutions, and prior-art lineages.
+description: Identify, verify, and map the people behind a paper or patent, and the associations between them, their institutions, and prior art. Use whenever you want to know who actually did the work or how people/labs connect — e.g. "who did the surgery in this animal study", "extract the authors and figure out who ran the experiments", "is this the same author X", "who is connected to this micro-coil work", "map the collaboration network around this patent", "which authors overlap with the prior art". Trigger for author-contribution analysis, identity verification across sources, and building the association/network map that links authors, inventors, institutions, and prior-art lineages.
 ---
 
 # Authorship & Association
