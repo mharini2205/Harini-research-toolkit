@@ -1,6 +1,6 @@
 {
   "name": "harini-research-toolkit",
-  "description": "Research skills for deep-tech R&D: paper briefing, authorship intelligence, researcher dossiers, prior-art landscaping, coil/neural/thermal modeling, and SimNIBS TMS setup.",
+  "description": "Research skills for deep-tech R&D: paper briefing, authorship intelligence, researcher dossiers, prior-art landscaping, coil/neural/thermal modeling, SimNIBS TMS setup, and a Now/Next/Later skill-learning planner.",
   "owner": {
     "name": "Harini",
     "email": "mharini2205@gmail.com",
@@ -11,8 +11,8 @@
       "name": "harini-research-toolkit",
       "displayName": "Harini Research Toolkit",
       "source": "./plugins/harini-research-toolkit",
-      "description": "Authorship/association mapping, computational modeling for magnetic / coil-based neural stimulation, prior-art landscaping, researcher dossiers, paper briefing, and SimNIBS TMS setup.",
-      "version": "0.3.0",
+      "description": "Authorship/association mapping, computational modeling for magnetic / coil-based neural stimulation, prior-art landscaping, researcher dossiers, paper briefing, SimNIBS TMS setup, and a Now/Next/Later skill-learning planner.",
+      "version": "0.4.0",
       "license": "MIT",
       "author": {
         "name": "Harini"
@@ -25,7 +25,8 @@
         "patents",
         "prior-art",
         "biophysics",
-        "simnibs"
+        "simnibs",
+        "learning-plan"
       ]
     }
   ]
