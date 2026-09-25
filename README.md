@@ -1,9 +1,10 @@
 # Harini Research Toolkit
 
 A [Claude Code](https://claude.com/claude-code) / Cowork plugin for deep-tech research groups:
-six skills covering literature analysis, patent landscaping, researcher intelligence, and
-computational modeling for **magnetic / coil-based neural stimulation** — and designed to be
-re-pointed at your own research domain by editing one context file.
+seven skills covering literature analysis, patent landscaping, researcher intelligence, and
+computational modeling for **magnetic / coil-based neural stimulation**, plus a personal
+learning planner — designed to be re-pointed at your own research domain by editing one
+context file.
 
 ## Install
 
@@ -26,16 +27,41 @@ In Cowork, use **Add marketplace** and enter `mharini2205/Harini-research-toolki
 | **prior-art-map** | Searches patents + literature around a concept and maintains a deduped, source-linked Excel landscape mapper | "prior art on microchannel coil arrays", "map the IP landscape for X" |
 | **computational-science** | Coil E-field / lead-field modeling, neural activation, thermal safety (Joule + bioheat), tissue dielectric lookups | "compute activation for a coil array", "does this coil stay under the 2 °C limit" |
 | **simnibs-tms-setup** | Translates a physical TMS target (Tesla / %MSO, depth) into SimNIBS 4.x inputs and reads the E-field back out at depth | "what dI/dt for 3.5 T", "measure the field 4 cm below the scalp" |
+| **skill-compass** *(new)* | Sorts the skills *you* need into **Now / Next / Later** from your interests and your to-do tasks, checks whether the Now list fits your hours before the deadline, and keeps a practice log so the plan updates as you learn | "what should I learn first", "am I ready for this task", "log 2 h of NumPy" |
 
 Skills trigger automatically from phrasing like the examples above — no slash command needed.
 
 ## Requirements
 
 - Claude Code or Cowork with plugin support. That's all for most skills.
-- `research-paper-brief`'s one-pager builder runs on plain **Python 3** (no packages).
+- `research-paper-brief`'s one-pager builder and `skill-compass` run on plain **Python 3** (no packages).
 - `researcher-dossier`'s DOCX builder needs **Node** plus a one-time `npm install docx`.
 - `simnibs-tms-setup` assumes you have **SimNIBS 4.x** for the actual simulations; its
   `kernel.py` helpers need `numpy` (and `simnibs` itself only for mesh readout).
+
+## Skill Compass — learning what you need, when you need it
+
+Most learning plans fail in one of two ways: you learn what's interesting while a deadline
+slips, or you only ever firefight and never grow. `skill-compass` keeps the two apart with
+one rule — **tasks decide Now and Next; interests decide Later.**
+
+```
+python plugins/harini-research-toolkit/skills/skill-compass/scripts/skill_compass.py \
+    plan plugins/harini-research-toolkit/skills/skill-compass/references/profile.example.json \
+    --html skill_compass.html
+```
+
+- **NOW** — a task due within 21 days needs it and you're below the needed level (just-in-time)
+- **NEXT** — a task needs it, but the deadline is further out
+- **LATER** — only your interests pull on it (just-in-case)
+- **HAVE** — you already meet every level asked of it
+
+Prerequisites inherit urgency (SimNIBS needs NumPy → NumPy moves up too), a capacity check
+tells you when the Now list can't fit your weekly hours, tasks get a ready / on track /
+at risk status, and `skill_compass.py log` records practice so the plan moves with you.
+Where a skill in this toolkit gives hands-on practice (e.g. `simnibs-tms-setup`,
+`prior-art-map`), the compass points you to it. Copy the example profile, fill in your own
+interests and tasks, and keep it in your own folder.
 
 ## Adapting the toolkit to your own field
 
@@ -67,7 +93,7 @@ plugins/harini-research-toolkit/       <- the plugin itself
   skills/
     <skill-name>/SKILL.md              <- instructions + trigger description
     <skill-name>/references/           <- shared context, schemas, examples
-    <skill-name>/scripts/              <- bundled builders (brief HTML, dossier DOCX)
+    <skill-name>/scripts/              <- bundled builders (brief HTML, dossier DOCX, skill compass)
 ```
 
 This repo is the single source of truth — install by syncing the marketplace above,
