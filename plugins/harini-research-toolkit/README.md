@@ -2,7 +2,8 @@
 
 Research skills for magnetic / coil-based neural stimulation: identifying who did what on a
 paper or patent, modeling coil/neural/thermal physics, landscaping prior art, profiling
-researchers and competitors, briefing papers, and setting up SimNIBS TMS simulations.
+researchers and competitors, briefing papers, setting up SimNIBS TMS simulations — plus a
+personal learning planner.
 
 ## Skills
 
@@ -12,6 +13,7 @@ researchers and competitors, briefing papers, and setting up SimNIBS TMS simulat
 - **researcher-dossier** — Build a verified, IP-aware DOCX dossier on a named researcher or competitor.
 - **research-paper-brief** — Turn a paper (or set of papers) into a fixed-structure brief plus a visual one-pager, closing with what it means for your own work.
 - **simnibs-tms-setup** — Translate a physical stimulation target into SimNIBS 4.x TMS inputs and read the induced E-field back out at depth.
+- **skill-compass** — Sort the skills you need into Now / Next / Later from your interests and to-do tasks, check the Now list fits your weekly hours, flag at-risk tasks, and log practice so the plan updates as you learn.
 
 ## Shared context
 
@@ -30,5 +32,5 @@ Drop this plugin into Cowork or Claude Code; skills load automatically and trigg
 phrasing described in each SKILL.md (e.g. "profile Dr. X", "prior art on microchannel coil
 arrays", "what dI/dt for 3.5 T").
 
-Bundled builders: `research-paper-brief` uses plain Python 3, `researcher-dossier` needs Node
+Bundled builders: `research-paper-brief` and `skill-compass` use plain Python 3, `researcher-dossier` needs Node
 plus a one-time `npm install docx`, and `simnibs-tms-setup`'s `kernel.py` needs `numpy`.
