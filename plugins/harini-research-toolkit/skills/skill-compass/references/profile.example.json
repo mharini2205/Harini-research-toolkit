@@ -1,0 +1,98 @@
+{
+  "person": "Example early-career biomedical engineer",
+  "as_of": "2026-10-01",
+  "hours_per_week": 6,
+  "interests": [
+    { "name": "neuromodulation", "weight": 3 },
+    { "name": "ai-for-science", "weight": 2 },
+    { "name": "medical-device-regulation", "weight": 1 }
+  ],
+  "skills": {
+    "python": 1,
+    "matlab": 1,
+    "literature-review": 2,
+    "numpy": 0,
+    "fem-basics": 0,
+    "simnibs": 0,
+    "patent-search": 1,
+    "technical-writing": 2
+  },
+  "tasks": [
+    {
+      "title": "Brief 5 thermal-safety papers for the lab meeting",
+      "due": "2026-10-08",
+      "importance": 2,
+      "needs": [
+        { "skill": "literature-review", "level": 2 },
+        { "skill": "technical-writing", "level": 2 }
+      ]
+    },
+    {
+      "title": "Run a SimNIBS E-field estimate at 4 cm depth",
+      "due": "2026-10-20",
+      "importance": 3,
+      "needs": [{ "skill": "simnibs", "level": 2 }]
+    },
+    {
+      "title": "Prior-art scan on implantable micro-coils",
+      "due": "2026-12-01",
+      "importance": 2,
+      "needs": [{ "skill": "patent-search", "level": 2 }]
+    }
+  ],
+  "catalog": {
+    "python": {
+      "label": "Python",
+      "effort_hours": 12,
+      "interests": ["ai-for-science"],
+      "first_step": "Rewrite one MATLAB script you already understand in Python."
+    },
+    "numpy": {
+      "label": "NumPy arrays",
+      "requires": ["python"],
+      "effort_hours": 6,
+      "first_step": "Vectorise a for-loop over field points into one array expression."
+    },
+    "fem-basics": {
+      "label": "FEM fundamentals",
+      "effort_hours": 8,
+      "interests": ["neuromodulation"],
+      "first_step": "Solve a 1-D heat equation by hand on 5 elements, then check it in code."
+    },
+    "simnibs": {
+      "label": "SimNIBS 4.x",
+      "requires": ["python", "numpy", "fem-basics"],
+      "effort_hours": 10,
+      "interests": ["neuromodulation"],
+      "toolkit_skill": "simnibs-tms-setup",
+      "first_step": "Run the bundled 'ernie' example head unchanged, then change only the coil position."
+    },
+    "patent-search": {
+      "label": "Patent search & claim reading",
+      "effort_hours": 6,
+      "interests": ["medical-device-regulation"],
+      "toolkit_skill": "prior-art-map",
+      "first_step": "Read the independent claims of one known patent and restate each in one line."
+    },
+    "literature-review": { "label": "Literature review", "toolkit_skill": "research-paper-brief" },
+    "technical-writing": { "label": "Technical writing" },
+    "pytorch": {
+      "label": "PyTorch",
+      "requires": ["python", "numpy"],
+      "effort_hours": 15,
+      "interests": ["ai-for-science"],
+      "first_step": "Fit a straight line with gradient descent before touching a neural net."
+    },
+    "iso-14708": {
+      "label": "ISO 14708 / IEC 60601 basics",
+      "effort_hours": 5,
+      "interests": ["medical-device-regulation"],
+      "interest_level": 1,
+      "first_step": "Map one clause (e.g. the 2 °C heating limit) to a test you could run."
+    }
+  },
+  "log": [
+    { "date": "2026-09-24", "skill": "python", "hours": 3, "note": "Ported a filter script from MATLAB" },
+    { "date": "2026-09-28", "skill": "fem-basics", "hours": 2, "note": "Watched intro lecture, did 1-D bar example" }
+  ]
+}
